@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kangkan PWA</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #ffffff;
+      text-align: center;
+    }
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: #ffffff;
+      background-color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #444444;
+    }
+  </style>
+</head>
+<body>
+  <button onclick="window.location.href='https://kangkandhemaji.shop/'">Go to Admin Panel</button>
+  <button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.yourapp.android'">Kangkan Android</button>
+
+  <script>
+    // Optional: If you want to add PWA functionality in JavaScript
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').then((registration) => {
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }).catch((error) => {
+          console.log('ServiceWorker registration failed: ', error);
+        });
+      });
+    }
+  </script>
+</body>
+</html>

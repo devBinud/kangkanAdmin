@@ -1,0 +1,29 @@
+{
+    "name": "Kangkan PWA",
+    "short_name": "Kangkan",
+    "description": "PWA with links to Admin Panel and Android App.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#000000",
+    "icons": [
+        {
+          "src": "assets/images/icon-192x192.png",
+          "type": "image/png",
+          "sizes": "192x192"
+        },
+        {
+          "src": "assets/images/icon-512x512.png",
+          "type": "image/png",
+          "sizes": "512x512"
+        }
+      ],
+    "screenshots": [
+      {
+        "src": "assets/images/screenshot-1280x720.png",
+        "type": "image/png",
+        "sizes": "1280x720",
+        "label": "Homepage Screenshot"
+      }
+    ]
+  }

@@ -16,6 +16,20 @@
       background-color: #f5f5f5;
       text-align: center;
     }
+    .card {
+      padding: 20px;
+      border-radius: 15px;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: 10px solid;
+      border-image: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff);
+      border-image-slice: 1;
+      animation: gradient-border 4s linear infinite;
+    }
+    .logo {
+      width: 150px; /* Adjust the size as needed */
+      margin-bottom: 20px;
+    }
     button {
       margin: 10px;
       padding: 15px 30px;
@@ -26,16 +40,25 @@
       border-radius: 45px;
       cursor: pointer;
       width: 250px;
+      transition: background-color 0.3s;
     }
     button:hover {
       background-color: #444444;
     }
+    @keyframes gradient-border {
+      0% { border-image-source: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff00ff); }
+      50% { border-image-source: linear-gradient(45deg, #00ff00, #0000ff, #ff00ff, #ff0000); }
+      100% { border-image-source: linear-gradient(45deg, #0000ff, #ff00ff, #ff0000, #00ff00); }
+    }
   </style>
 </head>
 <body>
-  <button onclick="window.location.href='https://kangkandhemaji.shop/'">Go to Admin Panel</button>
-  <button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.kangkan.app'">Kangkan Android</button>
-  <button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.kangkan.app'">Kangkan iOS</button>
+  <div class="card">
+    <img src="assets/images/logo.png" alt="Kangkan Logo" class="logo"> <!-- Add logo here -->
+    <button onclick="window.location.href='https://kangkandhemaji.shop/'">Go to Admin Panel</button>
+    <button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.kangkan.app'">Kangkan Android</button>
+    <button onclick="window.location.href='https://play.google.com/store/apps/details?id=com.kangkan.app'">Kangkan iOS</button>
+  </div>
 
   <script>
     // Optional: If you want to add PWA functionality in JavaScript
